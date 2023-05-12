@@ -1,0 +1,12 @@
+<div class="recipe-list">
+  <h2>Recipes</h2>
+  <ul>
+    <li *ngFor="let recipe of recipes" class="recipe">
+      {{ recipe.name }}
+      <button (click)="deleteRecipe(recipe.id)">Delete</button>
+      <a [routerLink]="['/recipes', recipe.id]">View Details</a>
+      <a [routerLink]="['/recipes/edit', recipe.id]">Edit</a>
+    </li>
+  </ul>
+  <a routerLink="/recipes/add">Add Recipe</a>
+</div>

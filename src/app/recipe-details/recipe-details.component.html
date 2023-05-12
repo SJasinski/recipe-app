@@ -1,0 +1,12 @@
+<div *ngIf="recipe">
+  <h2>{{ recipe.name }}</h2>
+  <div>
+    <h3>Ingredients</h3>
+    <p>{{ recipe.ingredients }}</p>
+  </div>
+  <div>
+    <h3>Instructions</h3>
+    <p>{{ recipe.instructions }}</p>
+  </div>
+  <a [routerLink]="['/recipes']">Back to list</a>
+</div>
